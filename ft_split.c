@@ -35,28 +35,28 @@ char    **ft_split(char const *s, char c)
         return (NULL);
     while (i < size)
     {
-        while (s[j] != c && s[j] != '\0')
+        while (s[j] != c && s[j])
             j++;
         j++;
-        result[i] = ft_substr(s, k, j);
+        result[i] = ft_substr(s, k, j - k);
         k = j;
         i++;
     }
-    result[i] = 0;
+    result[i] = "\0";
     return (result);
 }
 
-// int main(void)
-// {
-//     char str[] = "hello 42 school adelaide";
-//     char sep = ' ';
-//     char **result = ft_split(str, sep);
-//     int i = 0;
+int main(void)
+{
+    char str[] = "hello 42 school adelaide";
+    char sep = ' ';
+    char **result = ft_split(str, sep);
+    int i = 0;
 
-//     while (result[i])
-//     {
-//         printf("%s\n", result[i]);
-//         i++;
-//     }
-//     return (0);
-// }
+    while (result[i])
+    {
+        printf("%s\n", result[i]);
+        i++;
+    }
+    return (0);
+}

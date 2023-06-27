@@ -1,25 +1,22 @@
 #include "libft.h"
 
 /*
-ft_substr takes a string, starting index and len to be last index to be copied and
-allocates the memory to the return value using malloc and size is (len - start).
-leaves one memory for null terminator. Copying starts from strat index.
+ft_substr allocates (with malloc(3)) and returns a substring from the string ’s’.
+The substring begins at index ’start’ and is of maximum size ’len’.
 */
-char    *ft_substr(char const *str, unsigned int start, size_t len)
+char    *ft_substr(char const *s, unsigned int start, size_t len)
 {
     int     i;
     int     size;
     char    *result;
 
     i = 0;
-    size = len - start;
-    result = (char *)malloc(sizeof(char) * (size + 1));
-    if (!(result) || (!*str))
+    result = (char *)malloc(sizeof(char) * (len + 1));
+    if (!(result) || start > ft_strlen(s))
         return (0);
-    while (i < size)
+    while (i < len && s[i])
     {
-        result[i] = str[start];
-        start++;
+        result[i] = s[start + i];
         i++;
     }
     result[i] = '\0';
@@ -28,10 +25,10 @@ char    *ft_substr(char const *str, unsigned int start, size_t len)
 
 // int main(void)
 // {
-//     char main[] = "";
+//     char main[] = "hello 42 school";
 //     char *sub;
 
-//     sub = ft_substr(main, 7, 16);
+//     sub = ft_substr(main, 2, 10);
 //     printf("%s\n", sub);
 //     return (0);
 // }
