@@ -9,8 +9,8 @@ char    *ft_strtrim(char const *s1, char const *set)
 {
     size_t  i;
 
-    if ((!*s1) || (!*set))
-        return (0);
+    if (!(s1))
+        return (NULL);
     i = 0;
     while (*s1 && ft_strchr(set, *s1))
         s1++;
@@ -22,7 +22,7 @@ char    *ft_strtrim(char const *s1, char const *set)
 
 // int main(void)
 // {
-//     char    str[] = "44411444432hello 42 school32141234";
+//     char    *str = NULL;
 //     char    trim[] = "4123";
 //     char    *result = ft_strtrim(str, trim);
 
