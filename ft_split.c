@@ -30,9 +30,7 @@ char    **ft_split(char const *s, char c)
     i = 0;
     j = 0;
     k = 0;
-    result = (char **)malloc(sizeof(char *) * (size + 1));
-    if (result == NULL)
-        return (NULL);
+    result = (char **)ft_calloc((size + 1), sizeof(char *));
     while (i < size)
     {
         while (s[j] != c && s[j])

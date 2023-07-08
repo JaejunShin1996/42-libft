@@ -1,6 +1,6 @@
 #include "libft.h"
 
-unsigned int n_convert(int n)
+static unsigned int n_convert(int n)
 {
     unsigned int    temp;
 
@@ -12,7 +12,7 @@ unsigned int n_convert(int n)
     return (temp);
 }
 
-size_t  size_getter(int n)
+static size_t  size_getter(int n)
 {
     size_t              size;
     unsigned int        temp;
