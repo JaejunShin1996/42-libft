@@ -7,19 +7,17 @@ and put them into 2d array.
 size_t  words_count(char const *s, char c)
 {
     size_t  count;
-    int     i;
 
     count = 0;
-    i = 0;
-    while (s[i])
+    while (*s)
     {
-        if (s[i] != c)
+        if (*s != c)
         {
             count++;
-            while (s[i] != c && s[i])
-                i++;
+            while (*s != c && *s)
+                s++;
         }
-        i++;
+        s++;
     }
     return (count);
 }
@@ -53,18 +51,18 @@ char    **ft_split(char const *s, char c)
     return (result);
 }
 
-int main(void)
-{
-    char str[100] = ",,,,,,";
-    char sep = ',';
-    char **result = ft_split(str, sep);
-    int i = 0;
+// int main(void)
+// {
+//     char str[100] = ",123,123,123,123,123,";
+//     char sep = ',';
+//     char **result = ft_split(str, sep);
+//     int i = 0;
 
-    while (result[i])
-    {
-        printf("%s\n", result[i]);
-        i++;
-    }
-    printf("%s\n", result[i]);
-    return (0);
-}
+//     while (result[i])
+//     {
+//         printf("%s\n", result[i]);
+//         i++;
+//     }
+//     printf("%s\n", result[i]);
+//     return (0);
+// }

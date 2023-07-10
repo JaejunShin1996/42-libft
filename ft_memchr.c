@@ -23,8 +23,8 @@ void    *ft_memchr(const void *str, int c, size_t n)
 //         char ch = '4';
 //         char *result;
 
-//         result = memchr(str, ch, 0);
-//         // result = ft_memchr(str, ch, 1);
+//         // result = memchr(str, ch, 1);
+//         result = ft_memchr(str, ch, 0);
 //         printf("%s", result);
 //         return (0);
 // }

@@ -36,7 +36,7 @@ char    *ft_strnstr(const char	*big, const char *little, size_t len)
 
 // int main(void)
 // {
-//     char big[] = "smaillll ";
+//     char big[] = "smallll ";
 //     char small[] = "small";
 //     char *result;
 

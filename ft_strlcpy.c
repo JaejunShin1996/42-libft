@@ -33,7 +33,7 @@ size_t  ft_strlcpy(char *dst, const char *src, size_t size)
 //     char buffer[] = "Ludwig Wittgenstein";
 //     int result;
 
-//     result = ft_strlcpy(buffer, src, 0);
+//     result = ft_strlcpy(buffer, src, 12);
 //     // result = strlcpy(buffer, src, 0);
 //     printf("Dest = %s, %d", buffer, result);
 //     return (0);

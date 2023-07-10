@@ -20,9 +20,9 @@ int ft_memcmp(const void *str1, const void *str2, size_t n)
     return (0);
 }
 
-// int main(void)
-// {
-//     int result = memcmp("hEllo", "hello", 1);
-//     int result2 = ft_memcmp("hEllo", "hello", 1);
-//     printf("%d, %d", result, result2);
-// }
+int main(void)
+{
+    int result = memcmp("hEllo", "hello", 1);
+    int result2 = ft_memcmp("hEllo", "hello", 1);
+    printf("%d, %d", result, result2);
+}
