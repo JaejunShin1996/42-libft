@@ -6,8 +6,7 @@ The substring begins at index ’start’ and is of maximum size ’len’.
 */
 char    *ft_substr(char const *s, unsigned int start, size_t len)
 {
-    int     i;
-    int     size;
+    size_t  i;
     char    *result;
 
     i = 0;
@@ -28,7 +27,7 @@ char    *ft_substr(char const *s, unsigned int start, size_t len)
 //     char main[] = "hello 42 school";
 //     char *sub;
 
-//     sub = ft_substr(main, 2, 10);
+//     sub = ft_substr(main, 0, 3);
 //     printf("%s\n", sub);
 //     return (0);
 // }

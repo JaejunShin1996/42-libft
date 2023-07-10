@@ -1,23 +1,29 @@
 #include "libft.h"
 
-size_t  words_count(char const *s, char c)
-{
-    size_t  count;
-
-    count = 0;
-    while (*s)
-    {
-        if (*s == c)
-            count++;
-        s++;
-    }
-    return (count + 1);
-}
-
 /*
 ft_split takes a string and a character and split the string using char
 and put them into 2d array.
 */
+size_t  words_count(char const *s, char c)
+{
+    size_t  count;
+    int     i;
+
+    count = 0;
+    i = 0;
+    while (s[i])
+    {
+        if (s[i] != c)
+        {
+            count++;
+            while (s[i] != c && s[i])
+                i++;
+        }
+        i++;
+    }
+    return (count);
+}
+
 char    **ft_split(char const *s, char c)
 {
     size_t  size;
@@ -36,18 +42,21 @@ char    **ft_split(char const *s, char c)
         while (s[j] != c && s[j])
             j++;
         j++;
-        result[i] = ft_substr(s, k, j - k);
+        if (s[k] != c)
+        {
+            result[i] = ft_substr(s, k, j - k - 1);
+            i++;
+        }
         k = j;
-        i++;
     }
-    result[i] = "\0";
+    result[i] = NULL;
     return (result);
 }
 
 int main(void)
 {
-    char str[] = "hello 42 school adelaide";
-    char sep = ' ';
+    char str[100] = ",,,,,,";
+    char sep = ',';
     char **result = ft_split(str, sep);
     int i = 0;
 
@@ -56,5 +65,6 @@ int main(void)
         printf("%s\n", result[i]);
         i++;
     }
+    printf("%s\n", result[i]);
     return (0);
 }
