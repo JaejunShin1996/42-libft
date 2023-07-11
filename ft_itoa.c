@@ -1,5 +1,9 @@
 #include "libft.h"
 
+
+/*
+ft_itoa takes an integer and convert to a string.
+*/
 static unsigned int n_convert(int n)
 {
     unsigned int    temp;
@@ -29,9 +33,6 @@ static size_t  size_getter(int n)
     return (size);
 }
 
-/*
-ft_itoa takes an integer and convert to a string.
-*/
 char    *ft_itoa(int n)
 {
     size_t          size;
@@ -55,13 +56,3 @@ char    *ft_itoa(int n)
         result[size] = '-';
     return (result);
 }
-
-// int main(void)
-// {
-//     int n = -1234;
-//     char    *result;
-
-//     result = ft_itoa(n);
-//     printf("%s\n", result);
-//     return (0);
-// }

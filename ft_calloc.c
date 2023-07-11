@@ -13,19 +13,3 @@ void    *ft_calloc(size_t nitems, size_t size)
     ft_bzero(result, nitems * size);
     return (result);
 }
-
-// int main(void)
-// {
-//     char    *result;
-//     int     i = 0;
-//     size_t size = 6;
-    
-//     result = ft_calloc(size, sizeof(int));
-//     while (i < 24)
-//     {
-//         printf("%i, ", result[i]);
-//         printf("index : %i\n", i);
-//         i++;
-//     }
-//     return (0);
-// }

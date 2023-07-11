@@ -27,14 +27,3 @@ char    *ft_strjoin(char const *str1, char const *str2)
     result[i + j] = '\0';
     return (result);
 }
-
-// int main(void)
-// {
-//     char    str1[] = "Salam";
-//     char    str2[] = " Hello";
-//     char    *result;
-
-//     str1 = ft_strjoin(str1, str2);
-//     printf("%s\n", result);
-//     return (0);
-// }

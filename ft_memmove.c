@@ -17,14 +17,3 @@ void    *ft_memmove(void *dest, const void *src, size_t n)
     }
     return (dest);
 }
-
-// int main(void)
-// {
-//     char str1[50] = "abcdef";
-//     char *str2 = &str1[3];
-
-//     printf("%s\n", str2);
-//     ft_memmove(str2, str1, 5);
-//     printf("Dest is %s, Source is %s", str2, str1);
-//     return (0);
-// }

@@ -26,15 +26,3 @@ size_t  ft_strlcpy(char *dst, const char *src, size_t size)
         i++;
     return (i);
 }
-
-// int main(void)
-// {
-//     char src[] = "Hello 42 school";
-//     char buffer[] = "Ludwig Wittgenstein";
-//     int result;
-
-//     result = ft_strlcpy(buffer, src, 12);
-//     // result = strlcpy(buffer, src, 0);
-//     printf("Dest = %s, %d", buffer, result);
-//     return (0);
-// }

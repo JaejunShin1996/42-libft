@@ -29,13 +29,3 @@ char    *ft_strmapi(char const *s, char (*f)(unsigned int, char))
     }
     return (result);
 }
-
-// int main(void)
-// {
-//     char str[] = "Salam 42 Adelaide";
-//     char *result;
-
-//     result = ft_strmapi(str, to_a);
-//     printf("%s\n", result);
-//     return (0);
-// }

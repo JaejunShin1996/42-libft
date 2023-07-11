@@ -15,14 +15,3 @@ char    *ft_strrchr(const char *str, int c)
     }
     return (NULL);
 }
-
-// int main(void)
-// {
-//      char str[] = "Hello, 42, Adelaide";
-//      char ch = '4';
-//      char *result;
-
-//      result = ft_strrchr(str, ch);
-//      printf("%s", result);
-//      return (0);
-// }

@@ -19,11 +19,3 @@ void    *ft_memcpy(void *dest, const void *src, size_t n)
     }
     return (dest);
 }
-
-// int main(void)
-// {
-//     char str[50] = "Hello";
-//     char dest[50] = "It is Thursday and the weather is shit";
-//     ft_memcpy(dest, str, 3);
-//     printf("%s", dest);
-// }

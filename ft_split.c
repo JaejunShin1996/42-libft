@@ -50,19 +50,3 @@ char    **ft_split(char const *s, char c)
     result[i] = NULL;
     return (result);
 }
-
-// int main(void)
-// {
-//     char str[100] = ",123,123,123,123,123,";
-//     char sep = ',';
-//     char **result = ft_split(str, sep);
-//     int i = 0;
-
-//     while (result[i])
-//     {
-//         printf("%s\n", result[i]);
-//         i++;
-//     }
-//     printf("%s\n", result[i]);
-//     return (0);
-// }

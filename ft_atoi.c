@@ -1,5 +1,4 @@
 #include "libft.h"
-#include <limits.h>
 
 int ft_atoi(const char *str)
 {
@@ -25,11 +24,3 @@ int ft_atoi(const char *str)
 	}
 	return (result * minus);
 }
-
-// int main(void)
-// {
-// 	char min[] = "-2147483648";
-// 	int result = ft_atoi(min);
-
-// 	printf("%d\n", result);
-// }

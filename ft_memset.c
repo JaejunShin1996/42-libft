@@ -19,10 +19,3 @@ void    *ft_memset(void *str, int c, size_t n)
     }
     return (str);
 }
-
-// int main(void)
-// {
-//     char str[20] = "Hello, 42 Adelaide";
-//     memset(str, '$', 25);
-//     printf("%s", str);
-// }

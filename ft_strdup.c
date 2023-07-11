@@ -21,13 +21,3 @@ char    *ft_strdup(const char *str)
 	result[i] = '\0';
 	return (result);
 }
-
-// int main(void)
-// {
-//     char str[] = "hello";
-//     char *dest;
-
-//     dest = ft_strdup(str);
-//     printf("%s\n", dest);
-//     return (0);
-// }

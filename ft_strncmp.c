@@ -18,10 +18,3 @@ int ft_strncmp(const char *str1, const char *str2, size_t n)
     }
     return (0);
 }
-
-// int main(void)
-// {
-//     int result = strncmp("AsDFFF", "ASDFFF", 5);
-//     int result2 = ft_strncmp("AsDFFF", "ASDFFF", 5);
-//     printf("%d, %d", result, result2);
-// }

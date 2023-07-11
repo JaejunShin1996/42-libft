@@ -21,14 +21,3 @@ char    *ft_substr(char const *s, unsigned int start, size_t len)
     result[i] = '\0';
     return (result);
 }
-
-// int main(void)
-// {
-//     char main[] = "hello 42 school";
-//     char *sub;
-
-//     sub = ft_substr(main, 0, 3);
-//     printf("%s\n", sub);
-//     return (0);
-// }
-

@@ -30,15 +30,3 @@ size_t ft_strlcat(char * restrict dst, const char * restrict src, size_t dstsize
     result += i;
     return (result);
 }
-
-// int main(void)
-// {
-//     char dest[50] = "Hello";
-//     char src[] = "42 school";
-//     size_t result;
-    
-//     // result = ft_strlcat(dest, src, 20);
-//     result = strlcat(dest, src, 20);
-
-//     printf("%s, %zu", dest, result);
-// }
