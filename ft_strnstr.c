@@ -6,12 +6,11 @@
 /*   By: jaeshin <jaeshin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 13:26:57 by jaeshin           #+#    #+#             */
-/*   Updated: 2023/07/11 16:00:43 by jaeshin          ###   ########.fr       */
+/*   Updated: 2023/07/12 15:30:42 by jaeshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 /*
 The strnstr() function locates the	first occurrence of the	null-termi-

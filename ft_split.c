@@ -6,12 +6,11 @@
 /*   By: jaeshin <jaeshin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 13:19:58 by jaeshin           #+#    #+#             */
-/*   Updated: 2023/07/12 14:10:20 by jaeshin          ###   ########.fr       */
+/*   Updated: 2023/07/12 15:30:53 by jaeshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 /*
 ft_split takes a string and a character and split the string using char

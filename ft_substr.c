@@ -6,12 +6,11 @@
 /*   By: jaeshin <jaeshin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 13:28:10 by jaeshin           #+#    #+#             */
-/*   Updated: 2023/07/12 15:20:13 by jaeshin          ###   ########.fr       */
+/*   Updated: 2023/07/12 15:30:35 by jaeshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 /*
 ft_substr allocates (with malloc(3)) and returns a substring from the string ’s’.
