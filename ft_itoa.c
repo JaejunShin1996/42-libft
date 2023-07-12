@@ -1,58 +1,71 @@
-#include "libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jaejunshin <jaejunshin@student.42.fr>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/11 13:03:30 by jaeshin           #+#    #+#             */
+/*   Updated: 2023/07/11 22:49:40 by jaejunshin       ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
+#include "libft.h"
 
 /*
 ft_itoa takes an integer and convert to a string.
 */
-static unsigned int n_convert(int n)
+static unsigned int	n_convert(int n)
 {
-    unsigned int    temp;
+	unsigned int	temp;
 
-    temp = 0;
-    if (n < 0)
-        temp = -n;
-    else
-        temp = n;
-    return (temp);
+	temp = 0;
+	if (n < 0)
+		temp = -n;
+	else
+		temp = n;
+	return (temp);
 }
 
-static size_t  size_getter(int n)
+static size_t	size_getter(int n)
 {
-    size_t              size;
-    unsigned int        temp;
+	size_t			size;
+	unsigned int	temp;
 
-    size = 0;
-    temp = n_convert(n);
-    if (n < 0)
-        size++;
-    while (temp > 0)
-    {
-        size++;
-        temp /= 10;
-    }
-    return (size);
+	size = 0;
+	temp = n_convert(n);
+	if (n <= 0)
+		size++;
+	while (temp > 0)
+	{
+		size++;
+		temp /= 10;
+	}
+	return (size);
 }
 
-char    *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-    size_t          size;
-    char            *result;
-    unsigned int    temp;
-    
-    size = size_getter(n);
-    result = (char *)malloc(sizeof(char) * (size + 1));
-    if (result == NULL)
-        return (NULL);
-    temp = n_convert(n);
-    result[size] = '\0';
-    size--;
-    while (0 < temp)
-    {
-        result[size] = temp % 10 + '0';
-        temp /= 10;
-        size--;
-    }
-    if (n < 0)
-        result[size] = '-';
-    return (result);
+	size_t			size;
+	char			*result;
+	unsigned int	temp;
+
+	size = size_getter(n);
+	result = (char *)malloc(sizeof(char) * (size + 1));
+	if (result == NULL)
+		return (NULL);
+	if (n == 0)
+		result[0] = '0';
+	temp = n_convert(n);
+	result[size] = '\0';
+	size--;
+	while (0 < temp)
+	{
+		result[size] = temp % 10 + '0';
+		temp /= 10;
+		size--;
+	}
+	if (n < 0)
+		result[size] = '-';
+	return (result);
 }

@@ -1,10 +1,16 @@
-#include "libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jaeshin <jaeshin@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/11 13:26:06 by jaeshin           #+#    #+#             */
+/*   Updated: 2023/07/11 13:26:23 by jaeshin          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-// char    to_a(unsigned int i, char c)
-// {
-//     c = 'a';
-//     return (c);
-// }
+#include "libft.h"
 
 /*
 ft_strmapi takes a string and a function as arguments,
@@ -13,19 +19,19 @@ ft_strmapi takes a string and a function as arguments,
     to create a new string (with malloc(3)) resulting
     from successive applications of ’f’.
 */
-char    *ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-    char            *result;
-    unsigned int    i;
+	char			*result;
+	unsigned int	i;
 
-    result = ft_strdup(s);
-    if (result == NULL)
-        return (NULL);
-    i = 0;
-    while (s[i])
-    {
-        result[i] = f(i, s[i]);
-        i++;
-    }
-    return (result);
+	result = ft_strdup(s);
+	if (result == NULL)
+		return (NULL);
+	i = 0;
+	while (s[i])
+	{
+		result[i] = f(i, s[i]);
+		i++;
+	}
+	return (result);
 }

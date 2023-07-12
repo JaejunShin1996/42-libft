@@ -1,32 +1,40 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jaeshin <jaeshin@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/11 13:22:54 by jaeshin           #+#    #+#             */
+/*   Updated: 2023/07/11 14:09:34 by jaeshin          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 /*
 ft_strlcat appends a string onto the end of another. 
 */
-size_t ft_strlcat(char * restrict dst, const char * restrict src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-    size_t  i;
-    size_t  j;
-    size_t  result;
+	size_t	i;
+	size_t	j;
+	size_t	result;
 
-    i = 0;
-    j = 0;
-    result = 0;
-    //Finds the last index of dst and make sure it is less than the size.
-    while (dst[i] && (i < dstsize))
-        i++;
-    //concatonates from src while it is less than the size and a space for null.
-    while ((i + j + 1) < dstsize && src[j])
-    {
-        dst[i + j] = src[j];
-        j++;
-    }
-    //if i is less than the size, null is not copied.
-    if (i < dstsize)
-        dst[i + j] = '\0';
-    //Gets len of src.
-    while (src[result])
-        result++;    
-    result += i;
-    return (result);
+	i = 0;
+	j = 0;
+	result = 0;
+	while (dst[i] && (i < size))
+		i++;
+	while ((i + j + 1) < size && src[j])
+	{
+		dst[i + j] = src[j];
+		j++;
+	}
+	if (i < size)
+		dst[i + j] = '\0';
+	while (src[result])
+		result++;
+	result += i;
+	return (result);
 }

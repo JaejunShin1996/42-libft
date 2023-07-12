@@ -1,4 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jaeshin <jaeshin@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/11 13:26:57 by jaeshin           #+#    #+#             */
+/*   Updated: 2023/07/11 16:00:43 by jaeshin          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
+#include <stdio.h>
 
 /*
 The strnstr() function locates the	first occurrence of the	null-termi-
@@ -7,29 +20,28 @@ The strnstr() function locates the	first occurrence of the	null-termi-
      searched.	Since the strnstr() function is	a FreeBSD specific API,	it
      should only be used when portability is not a concern.
 */
-char    *ft_strnstr(const char	*big, const char *little, size_t len)
+char	*ft_strnstr(const char	*big, const char *little, size_t len)
 {
-    int i;
-    int j;
+	int	i;
+	int	j;
 
-    i = 0;
-    j = 0;
-    if (!(*little))
-        return ((char *)big);
-    while (len-- && big[i])
-    {
-        //Finds the first occurrence of little in big.
-        while (big[i] == little[j] && len)
-        {
-            if (!(little[j + 1]))
-                return ((char *)big + (i - j));
-            i++;
-            j++;
-            len--;
-        }
-        len += j - 1;
-        i++;
-        j = 0;
-    }
-    return (NULL);
+	i = 0;
+	j = 0;
+	if (!(*little))
+		return ((char *)big);
+	while (len && big[i])
+	{
+		while (big[i + j] == little[j] && len)
+		{
+			if (!(little[j + 1]))
+				return ((char *)big + (i));
+			j++;
+			len--;
+		}
+		len += j - 1;
+		i++;
+		j = 0;
+		len--;
+	}
+	return (NULL);
 }

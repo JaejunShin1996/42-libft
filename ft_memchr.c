@@ -1,18 +1,31 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jaeshin <jaeshin@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/07/11 13:03:35 by jaeshin           #+#    #+#             */
+/*   Updated: 2023/07/11 14:29:20 by jaeshin          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 /*
-ft_memchr searches for the first occurrence of the character of c in the first n bytes.
+ft_memchr searches for the first occurrence 
+	of the character of c in the first n bytes.
 */
-void    *ft_memchr(const void *str, int c, size_t n)
+void	*ft_memchr(const void *str, int c, size_t n)
 {
-    char    *temp;
+	unsigned char	*temp;
 
-    temp = (char *)str;
-    while (n--)
-    {
-        if (*temp == c)
-            return ((void *)temp);
-        temp++;
-    }
-    return (NULL);
+	temp = (unsigned char *)str;
+	while (n--)
+	{
+		if (*temp == (char)c)
+			return ((void *)temp);
+		temp++;
+	}
+	return (NULL);
 }
