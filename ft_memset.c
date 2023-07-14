@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jaejunshin <jaejunshin@student.42.fr>      +#+  +:+       +#+        */
+/*   By: jaeshin <jaeshin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 12:09:24 by jaeshin           #+#    #+#             */
-/*   Updated: 2023/07/11 19:25:45 by jaejunshin       ###   ########.fr       */
+/*   Updated: 2023/07/12 22:52:50 by jaeshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-ft_memset takes a string and replace values 
+ft_memset takes a string and replace values
     with the argument c upto size n from 0.
 */
 void	*ft_memset(void *str, int c, size_t n)
