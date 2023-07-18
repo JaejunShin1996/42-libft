@@ -6,7 +6,7 @@
 /*   By: jaeshin <jaeshin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 13:26:57 by jaeshin           #+#    #+#             */
-/*   Updated: 2023/07/12 15:30:42 by jaeshin          ###   ########.fr       */
+/*   Updated: 2023/07/17 17:18:45 by jaeshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,26 +21,23 @@ The strnstr() function locates the	first occurrence of the	null-termi-
 */
 char	*ft_strnstr(const char	*big, const char *little, size_t len)
 {
-	int	i;
-	int	j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	j = 0;
-	if (!(*little))
+	if (little[0] == '\0')
 		return ((char *)big);
-	while (len && big[i])
+	while (i < len && big[i])
 	{
-		while (big[i + j] == little[j] && len)
+		while (big[i + j] == little[j] && i + j < len)
 		{
 			if (!(little[j + 1]))
-				return ((char *)big + (i));
+				return ((char *)big + i);
 			j++;
-			len--;
 		}
-		len += j - 1;
-		i++;
 		j = 0;
-		len--;
+		i++;
 	}
 	return (NULL);
 }

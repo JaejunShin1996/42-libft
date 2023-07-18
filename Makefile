@@ -1,4 +1,4 @@
-TARGET	= libft.a
+NAME	= libft.a
 
 CC	= gcc
 CFLAGS	= -Wall -Wextra -Werror
@@ -12,18 +12,18 @@ SRCS 	   = 	ft_strlen ft_memmove ft_memcpy ft_strlcpy ft_strlcat ft_isalpha ft_i
 CFILES	= $(SRCS:%=%.c)
 OFILES	= $(SRCS:%=%.o)
 
-$(TARGET): 
+$(NAME): 
 	$(CC) $(CFLAGS) -c $(CFILES) -I./
-	ar -rc $(TARGET) $(OFILES)
+	ar -rc $(NAME) $(OFILES)
 
-all: $(TARGET)
+all: $(NAME)
 
 clean:
-	rm -f $(TARGET)
+	rm -f $(NAME)
 	rm -f $(OFILES)
 
 fclean: clean
-	rm -f $(TARGET)
+	rm -f $(NAME)
 
 re: fclean all
 

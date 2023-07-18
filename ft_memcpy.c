@@ -6,7 +6,7 @@
 /*   By: jaeshin <jaeshin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 13:05:50 by jaeshin           #+#    #+#             */
-/*   Updated: 2023/07/11 13:06:20 by jaeshin          ###   ########.fr       */
+/*   Updated: 2023/07/17 12:52:12 by jaeshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	char		*temp;
 	const char	*temp2;
 
+	if (!dest && !src)
+		return (NULL);
 	i = 0;
 	temp = (char *)dest;
 	temp2 = (const char *)src;

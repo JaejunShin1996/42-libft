@@ -6,7 +6,7 @@
 /*   By: jaeshin <jaeshin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 13:26:35 by jaeshin           #+#    #+#             */
-/*   Updated: 2023/07/11 13:26:49 by jaeshin          ###   ########.fr       */
+/*   Updated: 2023/07/17 16:51:27 by jaeshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@ if same, returns 0.
 */
 int	ft_strncmp(const char *str1, const char *str2, size_t n)
 {
-	size_t	i;
+	size_t			i;
 
 	i = 0;
-	while (i < n)
+	while (i < n && (str1[i] || str2[i]))
 	{
-		if ((str1[i] - str2[i]) != 0)
-			return (str1[i] - str2[i]);
+		if ((unsigned char)str1[i] != (unsigned char)str2[i])
+			return ((unsigned char)str1[i] - (unsigned char)str2[i]);
 		i++;
 	}
 	return (0);

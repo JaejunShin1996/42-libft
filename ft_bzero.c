@@ -6,7 +6,7 @@
 /*   By: jaeshin <jaeshin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 11:58:46 by jaeshin           #+#    #+#             */
-/*   Updated: 2023/07/14 14:17:58 by jaeshin          ###   ########.fr       */
+/*   Updated: 2023/07/17 12:37:35 by jaeshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,14 @@
 
 void	ft_bzero(void *str, size_t n)
 {
-	if (!str)
-		return ;
-	while (n > 0)
+	size_t			i;
+	unsigned char	*temp;
+
+	i = 0;
+	temp = (unsigned char *)str;
+	while (i < n)
 	{
-		((unsigned char *)str)[n - 1] = 0;
-		n--;
+		temp[i] = 0;
+		i++;
 	}
 }

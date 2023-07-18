@@ -6,7 +6,7 @@
 /*   By: jaeshin <jaeshin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 13:06:25 by jaeshin           #+#    #+#             */
-/*   Updated: 2023/07/11 13:07:09 by jaeshin          ###   ########.fr       */
+/*   Updated: 2023/07/17 13:08:15 by jaeshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,27 @@ str2 belongs to str1 but 'a' in str1 is zero index, 'd' is zero too.
 */
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	char		*temp;
-	const char	*temp2;
+	size_t	i;
 
-	temp = (char *)dest;
-	temp2 = (const char *)src;
-	while (n--)
+	if (!dest && !src)
+		return (NULL);
+	i = 0;
+	if (src < dest)
 	{
-		temp[n] = temp2[n];
+		i = n;
+		while (i > 0)
+		{
+			i--;
+			((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
+		}
+	}
+	else
+	{
+		while (i < n)
+		{
+			((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
+			i++;
+		}
 	}
 	return (dest);
 }

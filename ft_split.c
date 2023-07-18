@@ -6,7 +6,7 @@
 /*   By: jaeshin <jaeshin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 13:19:58 by jaeshin           #+#    #+#             */
-/*   Updated: 2023/07/12 15:30:53 by jaeshin          ###   ########.fr       */
+/*   Updated: 2023/07/17 17:59:32 by jaeshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,18 +39,18 @@ size_t	words_count(char const *s, char c)
 
 char	**ft_split(char const *s, char c)
 {
-	size_t	size;
 	size_t	i;
 	size_t	j;
 	size_t	k;
 	char	**result;
 
-	size = words_count(s, c);
 	i = 0;
 	j = 0;
 	k = 0;
-	result = (char **)ft_calloc((size + 1), sizeof(char *));
-	while (i < size)
+	result = (char **)malloc(sizeof(char *) * (words_count(s, c) + 1));
+	if (!result)
+		return (NULL);
+	while (i < words_count(s, c))
 	{
 		while (s[j] != c && s[j])
 			j++;
@@ -62,6 +62,6 @@ char	**ft_split(char const *s, char c)
 		}
 		k = j;
 	}
-	result[i] = NULL;
+	result[i] = 0;
 	return (result);
 }
