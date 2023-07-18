@@ -13,8 +13,8 @@ CFILES	= $(SRCS:%=%.c)
 OFILES	= $(SRCS:%=%.o)
 
 $(NAME): 
-	$(CC) $(CFLAGS) -c $(CFILES) -I./
-	ar -rc $(NAME) $(OFILES)
+	$(CC) $(CFLAGS) -c $(CFILES)
+	ar rc $(NAME) $(OFILES)
 
 all: $(NAME)
 
