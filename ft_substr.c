@@ -6,7 +6,7 @@
 /*   By: jaeshin <jaeshin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/07/11 13:28:10 by jaeshin           #+#    #+#             */
-/*   Updated: 2023/07/17 18:05:40 by jaeshin          ###   ########.fr       */
+/*   Updated: 2023/07/20 21:47:59 by jaeshin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*result;
 
 	size = ft_strlen(s);
-	if (len > size)
-		len = size;
+	if (len > size - start)
+		len = size - start;
 	if (start > size)
 		len = 0;
 	result = (char *)malloc(sizeof(char) * (len + 1));
