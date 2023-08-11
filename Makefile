@@ -3,13 +3,16 @@ NAME	= libft.a
 CC	= gcc
 CFLAGS	= -Wall -Wextra -Werror
 
-# SRCS 	   = 	*.c
+SRCS 	   =	libft/*.c \
+				ft_printf/*.c \
+				get_next_line/*.c
 
-# CFILES	= $(SRCS:%=%.c)
+OBJS	= $(SRCS:.c=.o)
 
 $(NAME): 
-	$(CC) $(CFLAGS) -c *.c
+	$(CC) $(CFLAGS) -c $(SRCS)
 	ar rc $(NAME) *.o
+	make clean
 
 all: $(NAME)
 
