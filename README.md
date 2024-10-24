@@ -56,10 +56,3 @@ This section includes extra utility functions that are not part of the libc or h
 - `ft_strmapi` - Apply a function to each character of a string.
 
 ---
-
-## How to Use
-
-1. **Clone the repository:**
-
-   ```bash
-   git clone https://github.com/jaejunshit96/libft.git
