@@ -14,10 +14,6 @@ Through this project, I enhanced my ability to work in C, manage heap memory, an
 - [Functions Overview](#functions-overview)
   - [Part 1 - Libc Functions](#part-1---libc-functions)
   - [Part 2 - Additional Functions](#part-2---additional-functions)
-- [How to Use](#how-to-use)
-- [Testing](#testing)
-- [Contributing](#contributing)
-- [License](#license)
 
 ---
 
